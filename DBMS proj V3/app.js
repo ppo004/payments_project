@@ -24,7 +24,6 @@ var express                             = require("express"),
 mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-app.use(flash());
 app.use(require("express-session")({
     secret: "Virat Kohli is the best batsmen cricket has ever seen (just my opinion)",
     resave: false,
