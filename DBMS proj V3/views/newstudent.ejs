@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<% if(x==1) {  %>
+<script type="text/javascript">
+    alert("Either USN/RFID exists or form is incomplete");
+</script>
+ <% } %>
+ <% if(x==0) {  %>
+    <script type="text/javascript">
+        alert("New student added");
+    </script>
+     <% } %>
+ <div class="container">
+    <div class="jumbotron">
+        <h1>New Student</h1>
+<form action="/newstudent" method="POST">
+    <input type="text" name="RFID" placeholder="RFID">
+    <input type="text" name="sname" placeholder="name">
+    <input type="text" name="USN" placeholder="USN">
+    <input type="text" name="Course" placeholder="Course">
+    <input type="text" name="DOB" placeholder="DOB">
+    <input type="text" name="PhoneNo" placeholder="PhoneNo">
+    <button>Submit</button>
+</form>
+<a class="btn btn-primary" role="button" href="/home">Home</a>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<% if(x==1) {  %>
+    <script type="text/javascript">
+        alert("Incomplete form / invalid data");
+    </script>
+     <% } %>
+<div class="container">
+<div class="jumbotron">
+    <h1>Update/Delete Student Details</h1>
+    <form action="/update_student_data" method="POST">
+    <select id="opt" name="opt">
+        <option value="delete">Delete</option>
+        <option value="update">Update</option>
+    </select>
+        <input type="text" name="RFID" placeholder="Present RFID">
+        <input type="text" name="USN" placeholder="Present USN">
+        
+        <select id="items" name="item">
+            <option value="new_Name">Name (Update only)</option>
+            <option value="new_RFID">RFID (Update and Delete)</option>
+            <option value="new_USN">USN (Update and Delete)</option>
+            <option value="new_DOB">DOB (Update only)</option>
+            <option value="new_Course">Course (Update only)</option>
+            <option value="new_Phoneno">PhoneNo (Update only)</option>
+        </select>
+        <input type="text" name="val" placeholder="Value(for updation only)">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <a class="btn btn-primary" role="button" href="/home">Home</a>     
+</div>
+</div>

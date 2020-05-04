@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<%  if(x==1) {  %>
+    <script type="text/javascript">
+        alert("Incomplete form / Details entered invalid");
+    </script>
+     <% } if(x==0) { %>
+        <script type="text/javascript">
+            alert("Done!!");
+        </script>
+        <% } %>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Recharge</h1>
+<form action="/recharge" method="POST">
+    <input type="text" name="RFIDno" placeholder="RFID">
+    <input type="text" name="Recharge" placeholder="Recharge amount">
+    <button>Submit</button>
+</form>
+<a class="btn btn-primary" role="button" href="/home">Home</a>
+</div>
+</div>

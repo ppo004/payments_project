@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<%  if(x==1) {  %>
+<script type="text/javascript">
+    alert("Form incomplete / FOrm data enterd is invalid");
+</script>
+ <% } %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>New Item</h1>
+<form action="/newitem" method="POST">
+    <input type="text" name="ID" placeholder="ID">
+    <input type="text" name="Iname" placeholder="name">
+    <input type="text" name="cost" placeholder="cost">
+    <select id="items" name="item">
+        <option value="Food">Food</option>
+        <option value="Library">Library</option>
+        <option value="Fee_Dept">Fee Dept</option>
+        <option value="Conveno">Conveno</option>
+      </select>
+    <button>Submit</button>
+</form>
+<a class="btn btn-primary" role="button" href="/home">Home</a>
+</div>
+</div>
